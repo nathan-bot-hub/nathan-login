@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+
+        <!-- SPLASH SCREEN -->
+        <section class="screen splash active" id="splash">
+            <div class="logo">
+                <h1>PIG<span>🪽</span>ON</h1>
+            </div>
+
+            <button class="start-btn" data-screen="welcome">
+                Get Started
+            </button>
+        </section>
+
+
+        <!-- WELCOME SCREEN -->
+        <section class="screen" id="welcome">
+
+            <header class="welcome-header">
+                <button class="back-btn" data-screen="splash">‹</button>
+                <h1>Welcome</h1>
+                <p>Please login or sign up to continue using our app.</p>
+            </header>
+
+            <div class="content welcome-content">
+
+                <h3>Enter Via Social Networks</h3>
+
+                <div class="socials">
+                    <button>f</button>
+                    <button>◎</button>
+                </div>
+
+                <p class="or">OR</p>
+                <p class="email-text">login with email</p>
+
+                <button class="main-btn" data-screen="signup">
+                    Sign up
+                </button>
+
+                <p class="bottom-text">
+                    You already have an account?
+                    <span data-screen="login">Login</span>
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- SIGN UP SCREEN -->
+        <section class="screen" id="signup">
+
+            <header class="form-header">
+                <button class="back-btn" data-screen="welcome">‹</button>
+                <h1>Sign Up</h1>
+            </header>
+
+            <div class="content">
+
+                <p class="description">
+                    Please register with email and sign up to continue using our app.
+                </p>
+
+                <h3>Enter Via Social Networks</h3>
+
+                <div class="socials">
+                    <button>f</button>
+                    <button>◎</button>
+                </div>
+
+                <p class="or">OR</p>
+                <p class="email-text">login with email</p>
+
+                <form id="signupForm">
+
+                    <input type="email" placeholder="Email Address" required>
+
+                    <div class="password-box">
+                        <input type="password" id="signupPassword"
+                            placeholder="Password" required>
+                        <button type="button" class="toggle-password"
+                            data-password="signupPassword">◉</button>
+                    </div>
+
+                    <label class="policy">
+                        <input type="checkbox" required>
+                        I agree with privacy policy
+                    </label>
+
+                    <button type="submit" class="main-btn">
+                        Sign up
+                    </button>
+
+                </form>
+
+                <p class="bottom-text">
+                    You already have an account?
+                    <span data-screen="login">Login</span>
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- LOGIN SCREEN -->
+        <section class="screen" id="login">
+
+            <header class="form-header">
+                <button class="back-btn" data-screen="welcome">‹</button>
+                <h1>Login Now</h1>
+            </header>
+
+            <div class="content">
+
+                <p class="description">
+                    Please login to continue using our app.
+                </p>
+
+                <h3>Enter Via Social Networks</h3>
+
+                <div class="socials">
+                    <button>f</button>
+                    <button>◎</button>
+                </div>
+
+                <p class="or">OR</p>
+                <p class="email-text">login with email</p>
+
+                <form id="loginForm">
+
+                    <input type="email" placeholder="Email Address" required>
+
+                    <div class="password-box">
+                        <input type="password" id="loginPassword"
+                            placeholder="Password" required>
+                        <button type="button" class="toggle-password"
+                            data-password="loginPassword">◉</button>
+                    </div>
+
+                    <p class="forgot">Forget password?</p>
+
+                    <button type="submit" class="main-btn">
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="bottom-text">
+                    Don't have an account?
+                    <span data-screen="signup">Sign Up</span>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
